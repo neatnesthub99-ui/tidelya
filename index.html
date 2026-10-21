@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestReviews - Home</title>
+    <!-- گوگل فونٹ 'Poppins' شامل کیا ہے جو اصل ویب سائٹ جیسا ہے -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* پتلے اور اسٹائلش فونٹس */
-        body { font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0f2043; font-weight: 300; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
         
         nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-        nav .logo { font-size: 20px; font-weight: 400; letter-spacing: 3px; color: #000; }
-        nav .menu-icon, nav .search-icon { font-size: 22px; cursor: pointer; color: #333; }
+        nav .logo { font-size: 22px; font-weight: 700; letter-spacing: 2px; color: #0b1b36; }
+        nav .menu-icon, nav .search-icon { font-size: 24px; cursor: pointer; color: #0b1b36; }
         
         .hero-section img { width: 100%; border-radius: 10px; display: block; }
-        /* مین ٹائٹل: تھوڑا گہرا نیلا اور نارمل موٹاپا */
-        .hero-title { font-size: 24px; font-weight: 400; margin: 15px 0 10px 0; line-height: 1.3; color: #0f2043; }
         
-        .meta-info { font-size: 12px; color: #888; margin-bottom: 15px; font-weight: 400; letter-spacing: 0.5px; }
-        .meta-info span { color: #00bcd4; font-weight: 400; }
+        /* مین ٹائٹل: بہت موٹا اور گہرا نیلا */
+        .hero-title { font-size: 24px; font-weight: 700; margin: 15px 0 10px 0; line-height: 1.3; color: #0b1b36; }
+        
+        .meta-info { font-size: 12px; color: #888; margin-bottom: 15px; font-weight: 500; }
+        .meta-info span { color: #00bcd4; font-weight: 600; }
         
         .related-reviews { margin: 15px 0; }
-        .related-reviews h4 { margin: 0 0 8px 0; font-size: 15px; color: #0f2043; font-weight: 500; }
-        .related-reviews p { margin: 0; color: #d89b55; font-weight: 400; font-size: 14px; line-height: 1.6; }
-        .article-desc { color: #444; font-size: 15px; line-height: 1.6; margin-bottom: 20px; font-weight: 300; }
+        .related-reviews h4 { margin: 0 0 8px 0; font-size: 16px; color: #0b1b36; font-weight: 700; }
+        .related-reviews p { margin: 0; color: #d89b55; font-weight: 600; font-size: 15px; line-height: 1.5; }
+        
+        .article-desc { color: #333; font-size: 15px; line-height: 1.6; margin-bottom: 20px; font-weight: 400; }
         
         .latest-section { border-top: 3px solid #e0a96d; padding-top: 10px; margin-bottom: 25px; }
-        .latest-section h2 { font-size: 22px; margin: 5px 0 20px 0; letter-spacing: 1px; color: #0f2043; font-weight: 400; }
+        .latest-section h2 { font-size: 26px; margin: 5px 0 20px 0; letter-spacing: 1px; color: #0b1b36; font-weight: 700; }
         
         .article-item { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; text-decoration: none; display: block; color: inherit; }
-        /* آرٹیکل کے ٹائٹلز کا رنگ گہرا نیلا اور فونٹ ہلکا */
-        .article-item h3 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 400; color: #0f2043; }
+        /* آرٹیکلز کے ٹائٹل: موٹے اور گہرے نیلے */
+        .article-item h3 { font-size: 19px; margin: 0; line-height: 1.4; font-weight: 600; color: #0b1b36; }
         
         .video-card { margin-bottom: 20px; text-decoration: none; color: inherit; display: block; }
         .video-thumbnail { position: relative; width: 100%; border-radius: 10px; overflow: hidden; }
         .video-thumbnail img { width: 100%; display: block; }
-        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: rgba(255, 255, 255, 0.8); }
+        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: rgba(255, 255, 255, 0.9); }
         .video-card-content { padding: 10px 0; }
-        .video-card-content h3 { font-size: 18px; margin: 0 0 5px 0; font-weight: 400; color: #0f2043; line-height: 1.4; }
+        .video-card-content h3 { font-size: 19px; margin: 0 0 5px 0; font-weight: 600; color: #0b1b36; line-height: 1.4; }
         
-        .view-shop-link { color: #1a237e; font-size: 15px; text-decoration: underline; font-weight: 400; display: inline-block; margin-top: 5px; }
+        .view-shop-link { color: #1a237e; font-size: 15px; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 5px; }
     </style>
 </head>
 <body>
