@@ -6,12 +6,12 @@
     <title>BestReviews - Video</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
-        .container { max-width: 600px; margin: 0 auto; padding: 15px; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
-        .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
         
-        .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 10px; position: relative; background: #000;}
+        /* ویڈیو کو اوپر سے چپکانے کے لیے کنٹینر کا پیڈنگ ختم کیا */
+        .container { max-width: 600px; margin: 0 auto; padding: 0 15px 15px 15px; }
+        
+        /* ویڈیو پلیئر */
+        .video-player { width: 100%; margin-bottom: 10px; position: relative; background: #000; }
         .video-player img { width: 100%; display: block; opacity: 0.9; }
         
         h3.shop-text { font-size: 20px; font-weight: bold; margin: 15px 0; color: #000; }
@@ -29,7 +29,7 @@
         
         .products-row.bottom { margin-top: 20px; }
 
-        /* نیا سیکشن: ویڈیو کے نیچے آنے والا آرٹیکل */
+        /* ویڈیو کے نیچے آنے والا آرٹیکل */
         .article-details { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
         .meta-info { font-size: 14px; color: #888; margin-bottom: 10px; }
         .meta-info span { color: #556cd6; font-weight: bold; }
@@ -38,13 +38,12 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <nav>
-        <a href="index.html" class="back-btn">←</a>
-        <a href="index.html" class="logo">BESTREVIEWS</a>
-        <div style="width: 24px;"></div>
-    </nav>
 
+<!-- میں نے یہاں سے نیوی گیشن بار (BESTREVIEWS والی پٹی) مکمل ختم کر دی ہے -->
+
+<div class="container">
+
+    <!-- ویڈیو بالکل سب سے اوپر -->
     <div class="video-player">
         <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: white; opacity: 0.8;">▶</div>
@@ -103,7 +102,7 @@
         <div class="product-item" style="visibility: hidden;"></div>
     </div>
 
-    <!-- 🟢 نیا سیکشن: پروڈکٹس کے نیچے آرٹیکل کا ٹائٹل اور ڈسکرپشن -->
+    <!-- پروڈکٹس کے نیچے آرٹیکل کا ٹائٹل اور ڈسکرپشن -->
     <div class="article-details">
         <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
         <div class="article-title">Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</div>
