@@ -7,7 +7,6 @@ const epic = `<div class="epic"><b>EPIC</b><u>discounts</u><span class="tri"></s
 
 // Hero collage
 $("#hero").innerHTML = FEATURED.images.map(i => `<div>${pic(i)}</div>`).join("");
-// hero ke 3rd aur 4th item ko right column mein rakhne ke liye
 const h = $("#hero");
 const right = document.createElement("div");
 right.style.cssText = "display:grid;grid-template-rows:1fr 1fr;gap:2px;grid-row:1/3;min-height:0";
@@ -44,12 +43,23 @@ $("#deals").innerHTML = DEALS.map(d => `
     ${d.price ? `<div class="price">${d.price}</div><div class="off">${d.off}</div>` : ""}
   </div>`).join("");
 
+// Video player (asli video ya YouTube, warna purani tasveer)
+function player(s) {
+  if (s.video) {
+    return `<div class="player"><video controls autoplay playsinline ${s.poster ? `poster="${s.poster}"` : ""} src="${s.video}"></video></div>`;
+  }
+  if (s.youtube) {
+    return `<div class="player"><iframe src="https://www.youtube.com/embed/${s.youtube}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>`;
+  }
+  return `<div class="video-card" style="display:block">${epic}</div>`;
+}
+
 // Modal
 function openModal(i) {
   const s = LATEST[i];
   $("#modal").innerHTML = `
     <button class="close" aria-label="Close">&#10005;</button>
-    <div class="video-card" style="display:block">${epic}</div>
+    ${player(s)}
     <h4 class="shop">Shop the video</h4>
     <div class="products">${s.products.map(p => `
       <div class="prod">
@@ -66,6 +76,7 @@ function openModal(i) {
 function closeModal() {
   $("#overlay").classList.remove("open");
   document.body.classList.remove("lock");
+  $("#modal").innerHTML = "";   // ویڈیو بند ہو جائے
 }
 document.addEventListener("click", e => {
   const o = e.target.closest("[data-open]");
