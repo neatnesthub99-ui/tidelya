@@ -4,44 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestReviews - Video</title>
+    <!-- گوگل فونٹ 'Poppins' -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* پتلے اور اسٹائلش فونٹس */
-        body { font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0f2043; font-weight: 300; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
         
         nav { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-        .back-btn { font-size: 24px; text-decoration: none; color: #333; font-weight: 300; }
+        .back-btn { font-size: 24px; text-decoration: none; color: #0b1b36; font-weight: 700; }
         
         .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 10px; position: relative; background: #000;}
         .video-player img { width: 100%; display: block; opacity: 0.9; }
         
-        h3.shop-text { font-size: 22px; font-weight: 400; margin: 15px 0; color: #0f2043; letter-spacing: -0.5px; }
+        h3.shop-text { font-size: 22px; font-weight: 700; margin: 15px 0; color: #0b1b36; }
         
         .products-row { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
         .product-item { width: 32%; text-align: center; }
         
-        .product-image-box { border: 1px solid #e0e0e0; border-radius: 10px; padding: 5px; margin-bottom: 10px; background: #fff; height: 100px; display: flex; align-items: center; justify-content: center; }
+        .product-image-box { border: 1px solid #ccc; border-radius: 10px; padding: 5px; margin-bottom: 10px; background: #fff; height: 100px; display: flex; align-items: center; justify-content: center; }
         .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        /* برانڈ کے نام: واپس پتلے اور صاف */
+        /* برانڈ کے نام: موٹے (Bold) جیسا کہ آپ نے کہا */
         .product-brand { 
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-weight: 400; 
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; 
             font-size: 15px; 
-            color: #0f2043; 
-            margin-bottom: 5px; 
-            letter-spacing: 0.5px;
+            color: #0b1b36; 
+            margin-bottom: 3px; 
         }
         
-        /* پروڈکٹ کا نام: مزید باریک */
         .product-name { 
             font-size: 13px; 
-            color: #555; 
+            color: #333; 
             margin-bottom: 10px; 
-            height: 34px; 
+            height: 36px; 
             overflow: hidden; 
             line-height: 1.4; 
-            font-weight: 300; 
+            font-weight: 500; 
         }
         
         /* گہرے نیلے رنگ کے بٹن */
@@ -54,17 +53,17 @@
             font-size: 14px; 
             cursor: pointer; 
             width: 100%; 
-            font-weight: 400; 
-            letter-spacing: 0.5px;
+            font-weight: 600; 
+            font-family: 'Poppins', sans-serif;
         }
         
         .products-row.bottom { margin-top: 20px; }
 
         .article-details { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
-        .meta-info { font-size: 13px; color: #888; margin-bottom: 10px; font-weight: 400; }
-        .meta-info span { color: #1a237e; font-weight: 400; }
-        .article-title { font-size: 22px; font-weight: 400; color: #0f2043; line-height: 1.3; margin-bottom: 15px; }
-        .article-text { font-size: 15px; color: #444; line-height: 1.7; font-weight: 300; }
+        .meta-info { font-size: 13px; color: #888; margin-bottom: 10px; font-weight: 500; }
+        .meta-info span { color: #1a237e; font-weight: 600; }
+        .article-title { font-size: 22px; font-weight: 700; color: #0b1b36; line-height: 1.3; margin-bottom: 15px; }
+        .article-text { font-size: 15px; color: #333; line-height: 1.7; font-weight: 400; }
     </style>
 </head>
 <body>
