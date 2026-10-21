@@ -60,7 +60,7 @@ button{font-family:inherit;cursor:pointer}
 .deals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding:14px 0 10px}
 .deal .pic{width:65px;height:65px;border-radius:8px;overflow:hidden}
 .deal .pic .ph{font-size:30px}
-.deal a{display:block;margin-top:10px;font-size:16px;font-weight:500;color:var(--navy);text-decoration:underline;text-underline-offset:2px;line-height:1.35}
+.deal a{display:block;margin-top:8px;font-size:12px;font-weight:500;color:var(--navy);text-decoration:underline;text-underline-offset:2px;line-height:1.3}
 .deal .sub{font-weight:700;font-size:14px;line-height:1.05;text-transform:uppercase}
 .deal .price{color:var(--gold);font-weight:700;font-size:21px;margin-top:6px}
 .deal .off{font-weight:600;font-size:14px}
