@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestReviews - Video</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
+        .container { max-width: 600px; margin: 0 auto; padding: 15px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
+        .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
+        
+        .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 15px; position: relative; background: #000;}
+        .video-player img { width: 100%; display: block; opacity: 0.8; }
+        .video-title { font-size: 20px; font-weight: bold; margin-bottom: 20px; line-height: 1.3; }
+        
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
+        .product-item { text-align: center; }
+        .product-image-box { border: 1px solid #eee; border-radius: 12px; padding: 10px; margin-bottom: 10px; background: #fff; height: 120px; display: flex; align-items: center; justify-content: center; }
+        .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .product-brand { font-weight: bold; font-size: 14px; }
+        .product-name { font-size: 13px; color: #555; margin: 4px 0 10px 0; height: 35px; overflow: hidden; }
+        .shop-btn { background-color: #556cd6; color: white; border: none; padding: 8px 20px; border-radius: 20px; font-size: 14px; cursor: pointer; width: 100%; font-weight: 500; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <a href="index.html" class="back-btn">←</a>
+        <a href="index.html" class="logo">BESTREVIEWS</a>
+        <div style="width: 24px;"></div> <!-- Spacer -->
+    </nav>
+
+    <!-- ویڈیو پلیئر -->
+    <div class="video-player">
+        <!-- آپ بعد میں یہاں اصل ویڈیو ڈال سکیں گے -->
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: white;">▶</div>
+    </div>
+
+    <div class="video-title">Epic Discounts: Home sweet home: Clever finds for your wallet</div>
+
+    <h3 style="margin-top: 0;">Shop the video</h3>
+    
+    <!-- پروڈکٹس گرڈ -->
+    <div class="products-grid">
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun">
+            </div>
+            <div class="product-brand">TOLOCO</div>
+            <div class="product-name">Massage Gun</div>
+            <button class="shop-btn">Shop now</button>
+        </div>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab">
+            </div>
+            <div class="product-brand">Samsung</div>
+            <div class="product-name">Galaxy Tab S10 FE</div>
+            <button class="shop-btn">Shop now</button>
+        </div>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
+            </div>
+            <div class="product-brand">Dyson</div>
+            <div class="product-name">V15 Detect Absolute</div>
+            <button class="shop-btn">Shop now</button>
+        </div>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8">
+            </div>
+            <div class="product-brand">Dyson</div>
+            <div class="product-name">V8 Cyclone</div>
+            <button class="shop-btn">Shop now</button>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com">
+            </div>
+            <div class="product-brand">Money.com</div>
+            <div class="product-name">Home Equity Loan</div>
+            <button class="shop-btn">Shop now</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
