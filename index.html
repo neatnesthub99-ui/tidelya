@@ -1,98 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestReviews - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
-        .container { max-width: 600px; margin: 0 auto; padding: 10px 15px; }
-        
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #eee; margin-bottom: 10px; }
-        nav .logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; color: #0b1b36; }
-        nav .menu-icon, nav .search-icon { font-size: 22px; cursor: pointer; color: #0b1b36; }
-        
-        .hero-section img { width: 100%; border-radius: 8px; display: block; }
-        
-        /* سب کچھ قریب کر دیا ہے */
-        .meta-info { font-size: 12px; color: #888; margin: 5px 0; font-weight: 500; }
-        .meta-info span { color: #00bcd4; font-weight: 600; }
-        
-        .hero-title { font-size: 20px; font-weight: 700; margin: 0 0 5px 0; line-height: 1.3; color: #0b1b36; }
-        
-        .article-desc { color: #333; font-size: 14px; line-height: 1.4; margin-bottom: 10px; font-weight: 400; }
-        
-        .related-reviews { margin: 10px 0; }
-        .related-reviews h4 { margin: 0 0 3px 0; font-size: 14px; color: #0b1b36; font-weight: 700; }
-        .related-reviews p { margin: 0; color: #d89b55; font-weight: 600; font-size: 13px; line-height: 1.3; }
-        
-        .latest-section { border-top: 3px solid #e0a96d; padding-top: 5px; margin-bottom: 15px; }
-        .latest-section h2 { font-size: 22px; margin: 5px 0 10px 0; letter-spacing: 1px; color: #0b1b36; font-weight: 700; }
-        
-        .article-item { border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 8px; text-decoration: none; display: block; color: inherit; }
-        .article-item h3 { font-size: 16px; margin: 0; line-height: 1.3; font-weight: 600; color: #0b1b36; }
-        
-        .video-card { margin-bottom: 15px; text-decoration: none; color: inherit; display: block; }
-        .video-thumbnail { position: relative; width: 100%; border-radius: 8px; overflow: hidden; }
-        .video-thumbnail img { width: 100%; display: block; }
-        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: rgba(255, 255, 255, 0.9); }
-        
-        .video-card-content { padding: 8px 0 0 0; }
-        .video-card-content h3 { font-size: 16px; margin: 0 0 3px 0; font-weight: 600; color: #0b1b36; line-height: 1.3; }
-        
-        .view-shop-link { color: #1a237e; font-size: 14px; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 2px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BESTREVIEWS</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <nav>
-        <div class="menu-icon">☰</div>
-        <div class="logo">BESTREVIEWS</div>
-        <div class="search-icon">🔍</div>
-    </nav>
 
-    <div class="hero-section">
-        <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop" alt="Halloween Costumes">
-        <div class="meta-info">Oct. 21, 2026 | <span>HOLIDAY</span></div>
-        <div class="hero-title">These are the top 10 bestselling kids' Halloween costumes on Amazon right now</div>
-        <p class="article-desc">These are Amazon's top 10 bestselling kids' Halloween costumes, AKA the ones you'll probably see at your door over and over this year.</p>
+<header class="bar">
+  <button class="icon-btn" aria-label="Menu">
+    <svg width="34" height="28" viewBox="0 0 34 28" stroke="#0d1445" stroke-width="3"><path d="M0 4h34M0 14h34M0 24h34"/></svg>
+  </button>
+  <a class="logo" href="#">
+    BESTR<svg class="logo-e" viewBox="0 0 16 26"><path d="M1 3l3 3 4-5 4 5 3-3v5H1z" fill="#d9a04a"/><rect x="1" y="12" width="14" height="3.500" fill="#0d1445"/><rect x="1" y="19" width="14" height="3.500" fill="#0d1445"/></svg>VIEWS
+  </a>
+  <button class="icon-btn" aria-label="Search">
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#0d1445" stroke-width="3"><circle cx="12" cy="12" r="9"/><path d="M19 19l9 9"/></svg>
+  </button>
+</header>
 
-        <div class="related-reviews">
-            <h4>Related Reviews:</h4>
-            <p>Halloween costume trends 2026: Horror, pop culture and mythology rule, Google unveils top-trending Halloween costumes of 2026, 9 Halloween costumes that let your evil cat shine</p>
-        </div>
-    </div>
+<main>
+  <div id="hero" class="collage"></div>
+  <div class="wrap" id="featured"></div>
 
-    <div class="latest-section">
-        <h2>THE LATEST</h2>
-        <div class="article-item">
-            <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
-            <h3>Amazon's bestselling cordless vacuum is under $100 and has nearly 3K 5-star reviews</h3>
-        </div>
-        <div class="article-item">
-            <div class="meta-info">Oct. 21, 2026 | <span>BEAUTY & PERSONAL CARE</span></div>
-            <h3>This Revlon hair dryer was purchased over 20K times this month and is less than $30</h3>
-        </div>
-        <div class="article-item" style="border-bottom: none;">
-            <div class="meta-info">Oct. 19, 2026 | <span>TOYS & GAMES</span></div>
-            <h3>Barbie has a new DreamHouse — in this economy?</h3>
-        </div>
-    </div>
+  <section class="wrap section">
+    <h2 class="sec-title">THE LATEST</h2>
+    <div id="latest"></div>
+  </section>
 
-    <div class="video-card">
-        <a href="video.html">
-            <div class="video-thumbnail">
-                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Epic Discounts Video">
-                <div class="play-button">▶</div>
-            </div>
-        </a>
-        <div class="video-card-content">
-            <h3>Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</h3>
-            <a href="video.html" class="view-shop-link">View and shop the video</a>
-        </div>
-    </div>
+  <section class="wrap section dark-line">
+    <h2 class="sec-title">TOP DEALS</h2>
+    <div class="deals" id="deals"></div>
+  </section>
+</main>
 
+<button class="bestie" aria-label="Ask Bestie">
+  <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round">
+    <path d="M24 7c11 0 19 7 19 15s-8 15-19 15c-2 0-4-.3-6-.9L7 41l3.500-8.500C7.500 30 5 26 5 22 5 14 13 7 24 7z"/>
+    <path d="M16 20h16M16 27h16" stroke-linecap="round"/>
+    <path d="M18 4l3 3 3-4 3 4 3-3v4H18z" fill="#f5c24a" stroke="none"/>
+  </svg>
+  Ask Bestie
+</button>
+<button class="totop" aria-label="Back to top">&#9650;</button>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
 </div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
