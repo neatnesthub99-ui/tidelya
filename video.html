@@ -6,82 +6,77 @@
 <title>Top Deals</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d1445;--teal:#4f9db3;--gold:#d9a04a;--link:#4a5fc1;--line:#dedede;--muted:#666}
+:root{--navy:#0d1445;--teal:#4f9db3;--gold:#d9a04a;--link:#4a5fc1;--line:#dcdcdc;--muted:#666}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--navy);font-family:Montserrat,Arial,sans-serif;line-height:1.3;padding-bottom:120px}
+html,body{margin:0;overflow-x:hidden}
+body{background:#fff;color:var(--navy);font-family:Montserrat,Arial,sans-serif;line-height:1.3;padding-bottom:90px}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 
-/* Stories */
-.story{padding:26px 0 24px;border-bottom:2px solid var(--line)}
-.story:last-of-type{border-bottom:0}
-.meta{font-family:Georgia,"Times New Roman",serif;color:var(--muted);font-size:1.15rem;margin-bottom:10px}
-.meta .bar{margin:0 6px}
-.meta b{font-family:Montserrat,sans-serif;color:var(--teal);font-weight:600;text-transform:uppercase}
-.story h2{font-size:1.9rem;line-height:1.25;margin:0;font-weight:600}
+.story{padding:20px 0;border-bottom:2px solid var(--line)}
+.story.last{border-bottom:0}
+.story h2{font-size:1.15rem;line-height:1.3;margin:0;font-weight:600}
 .story h2 a{color:inherit;text-decoration:none}
+.meta{font-family:Georgia,"Times New Roman",serif;color:var(--muted);font-size:.85rem;margin-bottom:8px}
+.meta .bar{margin:0 4px}
+.meta b{font-family:Montserrat,sans-serif;color:var(--teal);font-weight:600;font-size:.9rem;text-transform:uppercase}
 
-/* Video card */
-.video{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;margin:12px 0 28px;
+.video{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;margin:6px 0 18px;
   background:repeating-conic-gradient(from 0deg at 50% 50%,#2a8cf0 0 6deg,#1c6fe0 6deg 12deg)}
-.video::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(150,255,255,.95) 0,rgba(60,190,255,.5) 40%,transparent 75%)}
+.video::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(160,255,255,.95) 0,rgba(60,190,255,.5) 35%,transparent 70%)}
 .logo{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:.85}
-.logo .e{font-size:4.2rem;font-weight:700;color:#1d63c9;letter-spacing:-2px}
-.logo .d{font-size:3.4rem;font-weight:700;color:#f5a21b;letter-spacing:-2px;text-shadow:0 0 2px #fff}
-.play{position:absolute;left:50%;top:50%;width:140px;height:110px;transform:translate(-50%,-50%);opacity:.55}
-.play::after{content:"";position:absolute;left:30px;top:0;border-left:90px solid #fff;border-top:55px solid transparent;border-bottom:55px solid transparent;border-radius:6px}
-.story .link{display:inline-block;margin-top:22px;color:var(--link);font-size:1.4rem}
+.logo .e{font-size:min(13vw,5rem);font-weight:700;color:#1d63c9;letter-spacing:-2px}
+.logo .d{font-size:min(10.5vw,4rem);font-weight:700;color:#f5a21b;letter-spacing:-2px}
+.play{position:absolute;left:50%;top:50%;width:18%;aspect-ratio:1/1.1;transform:translate(-40%,-50%);background:rgba(255,255,255,.5);
+  clip-path:polygon(0 0,100% 50%,0 100%)}
+.story .link{display:inline-block;margin-top:12px;color:var(--link);font-size:1rem;text-decoration:underline}
 
-/* Top deals */
-.deals{border-top:2px solid #222;margin-top:34px;padding-top:56px}
-.deals::before{content:"";display:block;width:84px;height:10px;background:var(--gold);margin-bottom:30px}
-.deals h1{font-size:3.6rem;line-height:1;margin:0 0 36px;font-weight:700;letter-spacing:-1px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 24px}
-.pic{width:195px;max-width:100%;height:195px;border-radius:16px;overflow:hidden;background:#fff}
+.deals{border-top:2px solid #222;margin-top:24px;padding-top:32px}
+.deals::before{content:"";display:block;width:28px;height:4px;background:var(--gold);margin-bottom:20px}
+.deals h1{font-size:1.7rem;line-height:1;margin:0 0 22px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+.card{min-width:0}
+.pic{width:65px;height:65px;border-radius:8px;overflow:hidden;background:#fff}
 .pic svg,.pic img{width:100%;height:100%;display:block;object-fit:contain}
-.card a{display:block;margin-top:22px;color:var(--navy);font-size:1.5rem;font-weight:500;text-decoration:underline;text-underline-offset:3px}
-.card .sub{font-weight:700;font-size:1.3rem;line-height:1;text-transform:uppercase;margin-top:2px}
-.card .price{color:var(--gold);font-weight:700;font-size:2.3rem;margin-top:10px}
-.card .off{font-weight:600;font-size:1.35rem;margin-top:4px}
+.card a{display:block;margin-top:12px;color:var(--navy);font-size:.95rem;font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.card .sub{font-weight:700;font-size:.8rem;line-height:1;text-transform:uppercase}
+.card .price{color:var(--gold);font-weight:700;font-size:1.35rem;margin-top:6px}
+.card .off{font-weight:600;font-size:.85rem;margin-top:2px}
 
-/* Floating buttons */
-.bestie{position:fixed;left:16px;bottom:16px;display:flex;align-items:center;gap:16px;padding:16px 34px 16px 22px;border:0;border-radius:60px;color:#fff;
-  font:700 1.8rem Montserrat,sans-serif;background:linear-gradient(90deg,#1b2a6b 0%,#4f5cc0 55%,#5db8c9 100%);box-shadow:0 6px 18px rgba(0,0,0,.25);cursor:pointer;z-index:10}
-.bestie svg{width:46px;height:46px}
-.totop{position:fixed;right:18px;bottom:0;width:130px;height:90px;background:#fff;border:1px solid #ccc;border-bottom:0;border-radius:12px 12px 0 0;
-  cursor:pointer;display:grid;place-items:center;color:#9a9a9a;font-size:2.4rem;z-index:10}
+.bestie{position:fixed;left:12px;bottom:12px;display:flex;align-items:center;gap:10px;padding:10px 24px 10px 14px;border:0;border-radius:40px;color:#fff;
+  font:700 1.05rem Montserrat,sans-serif;background:linear-gradient(90deg,#1b2a6b 0%,#4f5cc0 55%,#5db8c9 100%);box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;z-index:10}
+.bestie svg{width:32px;height:32px}
+.totop{position:fixed;right:12px;bottom:0;width:44px;height:40px;background:#fff;border:1px solid #ccc;border-bottom:0;border-radius:8px 8px 0 0;
+  cursor:pointer;display:grid;place-items:center;color:#9a9a9a;font-size:1.1rem;z-index:10}
 
 @media(min-width:700px){
-  .story h2{font-size:2.2rem}.deals h1{font-size:4rem}
-  .grid{grid-template-columns:repeat(4,1fr)}
+  .story h2{font-size:1.5rem}.deals h1{font-size:2.2rem}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pic{width:90px;height:90px}
 }
 </style>
 </head>
 <body>
 <main class="wrap">
 
-  <!-- Story 1 (upar se kata hua) -->
   <article class="story">
     <h2><a href="#">...month and is less than $30</a></h2>
   </article>
 
-  <!-- Story 2 -->
   <article class="story">
     <div class="meta">Oct. 19, 2026 <span class="bar">|</span> <b>Toys &amp; Games</b></div>
     <h2><a href="#">Barbie has a new DreamHouse — in this economy?</a></h2>
   </article>
 
-  <!-- Story 3 with video -->
-  <article class="story">
+  <article class="story last">
     <div class="meta">Oct. 20, 2026 <span class="bar">|</span> <b>Home</b></div>
     <a class="video" href="#" aria-label="Play video">
       <div class="logo"><span class="e">EPIC</span><span class="d">discounts</span></div>
       <div class="play"></div>
     </a>
     <h2><a href="#">Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</a></h2>
-    <a class="link" href="#" style="text-decoration:underline">View and shop the video</a>
+    <a class="link" href="#">View and shop the video</a>
   </article>
 
-  <!-- Top Deals -->
   <section class="deals">
     <h1>TOP DEALS</h1>
     <div class="grid" id="deals"></div>
@@ -90,16 +85,14 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Montserrat,Arial,san
 
 <button class="bestie" aria-label="Ask Bestie">
   <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round">
-    <path d="M24 5c11 0 19 7 19 16s-8 16-19 16c-2 0-4-.3-6-.9L7 41l3.5-8.5C7.500 30 5 26 5 21 5 12 13 5 24 5z"/>
+    <path d="M24 5c11 0 19 7 19 16s-8 16-19 16c-2 0-4-.3-6-.9L7 41l3.5-8.5C7.5 30 5 26 5 21 5 12 13 5 24 5z"/>
     <path d="M16 19h16M16 26h16" stroke-linecap="round"/>
-    <path d="M18 3l3 3 3-4 3 4 3-3v4H18z" fill="#f5c24a" stroke="none"/>
   </svg>
   Ask Bestie
 </button>
 <div class="totop" role="button" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'})">&#9650;</div>
 
 <script>
-/* Tasveerein: SVG default. Apni photo lagani ho to img:"https://..." daalo */
 const houseSVG=`<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#cfe6fb"/>
 <rect y="165" width="200" height="35" fill="#5da24a"/>
 <rect x="20" y="85" width="120" height="85" fill="#2f4f86"/>
@@ -122,7 +115,6 @@ const vacSVG=`<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#f
 const deals=[
   {title:"Money.com Home Equity Loan", sub:"Best Home Equity Loans of 2026", svg:houseSVG},
   {title:"Dyson V15 Detect Absolute with Car Cleaning Kit", price:"$599.99", off:"33% OFF", svg:vacSVG},
-  /* aur products yahan add karo */
 ];
 
 document.getElementById("deals").innerHTML=deals.map(d=>`
