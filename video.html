@@ -1,117 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestReviews - Video</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
-        .container { max-width: 600px; margin: 0 auto; padding: 10px 15px; }
-        
-        nav { display: flex; align-items: center; padding: 5px 0; border-bottom: 1px solid #eee; margin-bottom: 10px; }
-        .back-btn { font-size: 22px; text-decoration: none; color: #0b1b36; font-weight: 700; }
-        
-        .video-player { width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 5px; position: relative; background: #000;}
-        .video-player img { width: 100%; display: block; opacity: 0.9; }
-        
-        h3.shop-text { font-size: 18px; font-weight: 700; margin: 10px 0; color: #0b1b36; }
-        
-        /* پروڈکٹس کے درمیان فاصلہ کم کر دیا ہے */
-        .products-row { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
-        .product-item { width: 32%; text-align: center; }
-        
-        .product-image-box { border: 1px solid #ccc; border-radius: 8px; padding: 5px; margin-bottom: 5px; background: #fff; height: 90px; display: flex; align-items: center; justify-content: center; }
-        .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        
-        .product-brand { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #0b1b36; margin-bottom: 0px; }
-        
-        .product-name { font-size: 11px; color: #333; margin-bottom: 5px; height: 30px; overflow: hidden; line-height: 1.2; font-weight: 500; }
-        
-        .shop-btn { background-color: #1a237e; color: white; border: none; padding: 6px 0; border-radius: 20px; font-size: 12px; cursor: pointer; width: 100%; font-weight: 600; font-family: 'Poppins', sans-serif; }
-        
-        .products-row.bottom { margin-top: 10px; }
-
-        /* نیچے والا آرٹیکل بھی قریب کر دیا ہے */
-        .article-details { margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
-        .meta-info { font-size: 12px; color: #888; margin: 5px 0; font-weight: 500; }
-        .meta-info span { color: #1a237e; font-weight: 600; }
-        .article-title { font-size: 18px; font-weight: 700; color: #0b1b36; line-height: 1.3; margin: 0 0 8px 0; }
-        .article-text { font-size: 14px; color: #333; line-height: 1.4; font-weight: 400; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealDesk – Top Deals & Stories</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f1646;--teal:#4f9db3;--gold:#d9a04a;--link:#4a5fc1;--line:#dcdcdc;--bg:#fff;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--navy);font-family:Montserrat,Arial,sans-serif;line-height:1.35}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.story{padding:22px 0;border-bottom:2px solid var(--line)}
+.meta{font-family:Georgia,serif;color:var(--muted);font-size:1rem;margin-bottom:8px}
+.meta b{font-family:Montserrat,sans-serif;color:var(--teal);margin-left:6px;text-transform:uppercase}
+.story h2{font-size:1.6rem;margin:0;font-weight:600}
+.story h2 a{color:inherit;text-decoration:none}
+.video{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:16/9;margin:6px 0 18px;
+ background:radial-gradient(circle,#8ef3ff 0,#1fa4ee 45%,#1058d8 100%)}
+.video .t{position:absolute;inset:0;display:grid;place-content:center;text-align:center;font-weight:700;font-size:3rem;color:#1f6fd0;line-height:.9}
+.video .t span{color:#f5a623;font-size:2.4rem}
+.video .play{position:absolute;left:50%;top:50%;width:70px;height:70px;margin:-35px;border-radius:50%;background:rgba(255,255,255,.55);display:grid;place-items:center}
+.video .play::after{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:6px}
+.link{color:var(--link);font-size:1.15rem}
+.deals{border-top:2px solid var(--navy);margin-top:30px;padding-top:50px}
+.deals::before{content:"";display:block;width:84px;height:10px;background:var(--gold);margin-bottom:34px}
+.deals h1{font-size:3rem;margin:0 0 30px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 24px}
+.card img,.card .ph{width:100%;max-width:195px;height:195px;object-fit:contain;border-radius:14px;display:block;background:#eef3f8}
+.card a{display:block;margin-top:16px;color:var(--navy);font-size:1.3rem;font-weight:500}
+.card small{display:block;font-weight:700;font-size:1.15rem;line-height:1}
+.price{color:var(--gold);font-weight:700;font-size:2rem;margin:10px 0 0}
+.off{font-weight:600;font-size:1.2rem}
+.bestie{position:fixed;left:16px;bottom:16px;display:flex;align-items:center;gap:14px;padding:16px 28px 16px 20px;border:0;border-radius:50px;
+ color:#fff;font:700 1.5rem Montserrat,sans-serif;background:linear-gradient(90deg,#1b2a6b,#5a5fc2 55%,#5db8c9);box-shadow:0 6px 18px rgba(0,0,0,.25);cursor:pointer}
+.bestie svg{width:42px;height:42px}
+.top{position:fixed;right:16px;bottom:16px;width:130px;height:90px;background:#fff;border:1px solid #ccc;border-radius:10px 10px 0 0;cursor:pointer;display:grid;place-items:center;color:#aaa;font-size:2rem}
+a:focus-visible,button:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+@media(min-width:600px){.story h2{font-size:1.9rem}.top{width:60px;height:60px;border-radius:10px}}
+</style>
 </head>
 <body>
-<div class="container">
-    <nav>
-        <a href="index.html" class="back-btn">←</a>
-    </nav>
+<main class="wrap">
 
-    <div class="video-player">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 45px; color: white; opacity: 0.8;">▶</div>
-    </div>
+<article class="story">
+  <div class="meta">Oct. 19, 2026 | <b>Toys &amp; Games</b></div>
+  <h2><a href="#">Barbie has a new DreamHouse — in this economy?</a></h2>
+</article>
 
-    <h3 class="shop-text">Shop the video</h3>
-    
-    <div class="products-row">
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun">
-            </div>
-            <div class="product-brand">TOLOCO</div>
-            <div class="product-name">Massage Gun</div>
-            <button class="shop-btn">Shop now</button>
-        </div>
+<article class="story" style="border-bottom:0">
+  <div class="meta">Oct. 20, 2026 | <b>Home</b></div>
+  <a class="video" href="#" aria-label="Play video">
+    <div class="t">EPIC<span>discounts</span></div><div class="play"></div>
+  </a>
+  <h2><a href="#">Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</a></h2>
+  <p><a class="link" href="#">View and shop the video</a></p>
+</article>
 
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab">
-            </div>
-            <div class="product-brand">Samsung</div>
-            <div class="product-name">Galaxy Tab S10 FE</div>
-            <button class="shop-btn">Shop now</button>
-        </div>
+<section class="deals">
+  <h1>TOP DEALS</h1>
+  <div class="grid" id="deals"></div>
+</section>
+</main>
 
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
-            </div>
-            <div class="product-brand">Dyson</div>
-            <div class="product-name">V15 Detect Absolute...</div>
-            <button class="shop-btn">Shop now</button>
-        </div>
-    </div>
+<button class="bestie" aria-label="Ask Bestie">
+  <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3"><path d="M24 6c10 0 18 7 18 15s-8 15-18 15c-2 0-4-.3-6-.9L8 40l3-8C8 29.5 6 25.5 6 21 6 13 14 6 24 6z"/><path d="M17 20h14M17 27h14"/></svg>
+  Ask Bestie
+</button>
+<div class="top" onclick="scrollTo({top:0,behavior:'smooth'})" role="button" aria-label="Back to top">▲</div>
 
-    <div class="products-row bottom">
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8">
-            </div>
-            <div class="product-brand">Dyson</div>
-            <div class="product-name">V8 Cyclone</div>
-            <button class="shop-btn">Shop now</button>
-        </div>
-
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com">
-            </div>
-            <div class="product-brand">Money.com</div>
-            <div class="product-name">Home Equity Loan</div>
-            <button class="shop-btn">Shop now</button>
-        </div>
-        
-        <div class="product-item" style="visibility: hidden;"></div>
-    </div>
-
-    <div class="article-details">
-        <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
-        <div class="article-title">Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</div>
-        <div class="article-text">
-            Hosted by: Ashley Howard. Make home your haven and discover cozy upgrades worth grabbing now. Your home is your favorite place to be, so this week's Epic Discounts is dedicated to it. From keeping it clean to pampering yourself without leaving it, our favorite products of the week are perfect for making the most of the time you spend at home.
-        </div>
-    </div>
-
-</div>
+<script>
+// Yahan apne products add/edit karo
+const deals=[
+ {title:"Home Equity Loan",sub:"Best home equity loans of 2026",img:""},
+ {title:"Dyson V15 Detect Absolute with Car Cleaning Kit",price:"$599.99",off:"33% OFF",img:""},
+];
+document.getElementById("deals").innerHTML=deals.map(d=>`
+ <div class="card">
+  ${d.img?`<img src="${d.img}" alt="">`:`<div class="ph"></div>`}
+  <a href="#">${d.title}</a>
+  ${d.sub?`<small>${d.sub.toUpperCase()}</small>`:""}
+  ${d.price?`<p class="price">${d.price}</p><div class="off">${d.off}</div>`:""}
+ </div>`).join("");
+</script>
 </body>
 </html>
