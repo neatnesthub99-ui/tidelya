@@ -13,14 +13,11 @@
         nav .logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; color: #0b1b36; }
         nav .menu-icon, nav .search-icon { font-size: 22px; cursor: pointer; color: #0b1b36; }
         
-        /* سب سے اوپر والی تصویر کی اونچائی کم ہے */
+        /* اوپر والی تصویر */
         .hero-section img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; display: block; }
-        
         .meta-info { font-size: 12px; color: #888; margin: 5px 0; font-weight: 500; }
         .meta-info span { color: #00bcd4; font-weight: 600; }
-        
         .hero-title { font-size: 20px; font-weight: 700; margin: 0 0 5px 0; line-height: 1.3; color: #0b1b36; }
-        
         .article-desc { color: #333; font-size: 14px; line-height: 1.4; margin-bottom: 10px; font-weight: 400; }
         
         .related-reviews { margin: 10px 0; }
@@ -29,7 +26,6 @@
         
         .latest-section { border-top: 3px solid #e0a96d; padding-top: 5px; margin-bottom: 15px; }
         .latest-section h2 { font-size: 22px; margin: 5px 0 10px 0; letter-spacing: 1px; color: #0b1b36; font-weight: 700; }
-        
         .article-item { border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 8px; text-decoration: none; display: block; color: inherit; }
         .article-item h3 { font-size: 16px; margin: 0; line-height: 1.3; font-weight: 600; color: #0b1b36; }
         
@@ -37,30 +33,41 @@
         .video-thumbnail { position: relative; width: 100%; border-radius: 8px; overflow: hidden; }
         .video-thumbnail img { width: 100%; display: block; }
         .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 45px; color: rgba(255, 255, 255, 0.9); }
-        
         .video-card-content { padding: 8px 0 0 0; }
         .video-card-content h3 { font-size: 16px; margin: 0 0 3px 0; font-weight: 600; color: #0b1b36; line-height: 1.3; }
-        
         .view-shop-link { color: #1a237e; font-size: 14px; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 2px; }
 
-        /* 🟢 نیوز لیٹر والا باکس (اونچائی بہت کم کر دی ہے) */
+        /* 🟢 آپ کی سکرین شاٹ والا Top Picks سیکشن */
+        .top-picks-section { margin-top: 20px; margin-bottom: 20px; }
+        .top-picks-section h2 { font-size: 22px; font-weight: 700; margin: 0 0 10px 0; color: #0b1b36; letter-spacing: 1px; }
+        .top-picks-section p { font-size: 14px; color: #333; margin-bottom: 15px; line-height: 1.4; }
+        
+        .tp-products-row { display: flex; justify-content: space-between; gap: 10px; overflow: hidden; }
+        .tp-product-item { width: 31%; text-align: center; }
+        .tp-product-image { width: 100%; height: 110px; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+        .tp-product-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .tp-product-brand { font-weight: 700; font-size: 14px; color: #0b1b36; margin-bottom: 2px; }
+        .tp-product-name { font-size: 12px; color: #333; line-height: 1.2; margin-bottom: 8px; height: 30px; overflow: hidden; }
+        .tp-check-btn { background-color: #556cd6; color: white; border: none; padding: 8px 0; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; font-family: 'Poppins', sans-serif; }
+
+        /* 🟢 نیوز لیٹر والا باکس (آپ کی بات کے مطابق اونچائی بہت کم کر دی ہے) */
         .newsletter-section {
             background-color: #0b1b36;
             color: white;
-            padding: 15px; /* پیڈنگ کم کر دی تاکہ باکس چھوٹا ہو جائے */
-            margin-top: 20px;
-            border-radius: 8px;
+            padding: 20px 15px; /* 🟢 پیڈنگ کم کر دی تاکہ باکس چھوٹا ہو جائے */
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 0px; /* سکرین شاٹ میں کوئی گولائی نہیں تھی */
         }
-        .newsletter-section h2 { font-size: 22px; margin: 0 0 2px 0; font-weight: 700; line-height: 1.2; }
+        .newsletter-section h2 { font-size: 24px; margin: 0 0 2px 0; font-weight: 700; line-height: 1.1; }
         .newsletter-section h2 span { color: #e0a96d; }
-        .newsletter-section .sub-text { font-size: 12px; font-weight: 700; color: #8b9bb4; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .newsletter-section p { font-size: 13px; line-height: 1.4; margin: 0 0 10px 0; }
+        .newsletter-section .sub-text { font-size: 13px; font-weight: 700; color: #8b9bb4; margin-bottom: 10px; letter-spacing: 0.5px; }
+        .newsletter-section p { font-size: 14px; line-height: 1.4; margin: 0 0 15px 0; color: #e2e8f0; }
         
-        .newsletter-form { display: flex; height: 40px; }
-        .newsletter-form input { flex: 1; padding: 0 12px; border: none; border-radius: 4px 0 0 4px; font-size: 14px; outline: none; font-family: 'Poppins', sans-serif;}
-        .newsletter-form button { background-color: #556cd6; color: white; border: none; padding: 0 15px; border-radius: 0 4px 4px 0; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif;}
-        
-        .newsletter-success { color: #00bcd4; font-size: 12px; margin-top: 6px !important; margin-bottom: 0 !important; }
+        .newsletter-form { display: flex; height: 45px; }
+        .newsletter-form input { flex: 1; padding: 0 15px; border: none; border-radius: 4px 0 0 4px; font-size: 15px; outline: none; font-family: 'Poppins', sans-serif; color: #333;}
+        .newsletter-form button { background-color: #556cd6; color: white; border: none; padding: 0 20px; border-radius: 0 4px 4px 0; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif;}
+        .newsletter-success { color: #00bcd4; font-size: 13px; margin-top: 10px !important; margin-bottom: 0 !important; }
     </style>
 </head>
 <body>
@@ -112,7 +119,42 @@
         </div>
     </div>
 
-    <!-- 🟢 نیوز لیٹر سیکشن (اب بہت کم جگہ لے گا) -->
+    <!-- 🟢 Top Picks سیکشن (جو آپ کی تصویر میں تھا) -->
+    <div class="top-picks-section">
+        <h2>OUR TOP PICKS</h2>
+        <p>this season, hand picked by our experts just for you.</p>
+        
+        <div class="tp-products-row">
+            <div class="tp-product-item">
+                <div class="tp-product-image">
+                    <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=300&auto=format&fit=crop" alt="Shark Cleaner">
+                </div>
+                <div class="tp-product-brand">Shark</div>
+                <div class="tp-product-name">StainStriker Portable Carpet and Upholstery Cleaner</div>
+                <button class="tp-check-btn">Check Price</button>
+            </div>
+
+            <div class="tp-product-item">
+                <div class="tp-product-image">
+                    <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=300&auto=format&fit=crop" alt="CHIVALZ Dehumidifier">
+                </div>
+                <div class="tp-product-brand">CHIVALZ</div>
+                <div class="tp-product-name">Dehumidifier</div>
+                <button class="tp-check-btn">Check Price</button>
+            </div>
+
+            <div class="tp-product-item">
+                <div class="tp-product-image">
+                    <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
+                </div>
+                <div class="tp-product-brand">Dyson</div>
+                <div class="tp-product-name">V15 Detect Absolute Vacuum</div>
+                <button class="tp-check-btn">Check Price</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🟢 نیوز لیٹر سیکشن (اونچائی کم کر دی ہے) -->
     <div class="newsletter-section">
         <h2>Sign up for our <br><span>newsletter</span></h2>
         <div class="sub-text">2X WEEKLY</div>
