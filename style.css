@@ -23,9 +23,9 @@ button{font-family:inherit;cursor:pointer}
 @media(min-width:720px){.collage{margin:2px auto 0;height:280px}}
 
 /* Meta + headings */
-.meta{font-family:Georgia,"Times New Roman",serif;font-size:12.500px;color:var(--muted);margin-bottom:6px}
+.meta{font-family:Georgia,"Times New Roman",serif;font-size:12.5px;color:var(--muted);margin-bottom:6px}
 .meta i{font-style:normal;margin:0 4px}
-.meta b{font-family:Montserrat,sans-serif;font-weight:600;color:var(--teal);text-transform:uppercase;font-size:12.500px}
+.meta b{font-family:Montserrat,sans-serif;font-weight:600;color:var(--teal);text-transform:uppercase;font-size:12.5px}
 .featured-title{font-size:20px;line-height:1.35;font-weight:600;margin:0 0 14px}
 .excerpt{font-size:14px;line-height:1.5;margin:0 0 20px;font-weight:400}
 #featured{padding-top:18px}
@@ -57,13 +57,13 @@ button{font-family:inherit;cursor:pointer}
 .epic .tri{position:absolute;left:50%;top:50%;width:60px;height:64px;transform:translate(-35%,-50%);background:rgba(255,255,255,.5);clip-path:polygon(0 0,100% 50%,0 100%)}
 
 /* Deals */
-.deals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding:14px 0 10px}
+.deals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px;padding:14px 0 10px}
 .deal .pic{width:65px;height:65px;border-radius:8px;overflow:hidden}
 .deal .pic .ph{font-size:30px}
 .deal a{display:block;margin-top:8px;font-size:12px;font-weight:500;color:var(--navy);text-decoration:underline;text-underline-offset:2px;line-height:1.3}
-.deal .sub{font-weight:700;font-size:14px;line-height:1.05;text-transform:uppercase}
-.deal .price{color:var(--gold);font-weight:700;font-size:21px;margin-top:6px}
-.deal .off{font-weight:600;font-size:14px}
+.deal .sub{font-weight:700;font-size:12px;line-height:1.2;text-transform:uppercase}
+.deal .price{color:var(--gold);font-weight:700;font-size:15px;margin-top:5px}
+.deal .off{font-weight:600;font-size:11px}
 @media(min-width:720px){.deals{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 /* Floating buttons */
@@ -84,7 +84,7 @@ button{font-family:inherit;cursor:pointer}
 .prod .pic{aspect-ratio:1;border:1px solid #bbb;border-radius:10px;overflow:hidden;background:#fff}
 .prod .pic .ph{font-size:34px}
 .prod b{display:block;font-size:16px;font-weight:700;margin-top:10px}
-.prod span{display:block;font-size:14.500px;font-weight:400;line-height:1.4;margin-top:2px;min-height:60px}
+.prod span{display:block;font-size:14.5px;font-weight:400;line-height:1.4;margin-top:2px;min-height:60px}
 .prod a{display:block;background:var(--btn);color:#fff;text-decoration:none;border-radius:30px;padding:10px 0;font-size:15px;margin-top:6px}
 .modal .meta b{color:var(--btn)}
 .modal h2{font-size:20px;line-height:1.35;font-weight:700;margin:4px 0 18px}
