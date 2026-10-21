@@ -4,83 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestReviews - Video</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Libre Franklin', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
+        .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
         
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
-        nav .logo { font-size: 22px; font-weight: 800; letter-spacing: 2px; text-decoration: none; color: inherit; }
-        nav .back { font-size: 28px; text-decoration: none; color: inherit; }
+        .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 10px; position: relative; background: #000;}
+        .video-player img { width: 100%; display: block; opacity: 0.9; }
         
-        .video-box { position: relative; width: 100%; border-radius: 10px; overflow: hidden; background: #00bcd4; }
-        .video-box img { width: 100%; display: block; }
-        .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: rgba(255, 255, 255, 0.9); }
+        h3.shop-text { font-size: 20px; font-weight: bold; margin: 15px 0; color: #000; }
         
-        .shop-text { font-size: 22px; font-weight: 800; margin: 20px 0 15px 0; color: #0b1b36; }
+        .products-row { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
+        .product-item { width: 32%; text-align: center; }
         
-        .products-row { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 25px; }
-        .product { width: 32%; text-align: center; }
+        .product-image-box { border: 1px solid #ccc; border-radius: 10px; padding: 5px; margin-bottom: 10px; background: #fff; height: 100px; display: flex; align-items: center; justify-content: center; }
+        .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        .img-box { border: 1px solid #ccc; border-radius: 12px; padding: 10px; height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; background: #fff; }
-        .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .product-brand { font-weight: bold; font-size: 14px; color: #000; margin-bottom: 2px; }
+        .product-name { font-size: 12px; color: #333; margin-bottom: 10px; height: 32px; overflow: hidden; line-height: 1.3; }
         
-        .brand { font-weight: 800; font-size: 16px; margin-bottom: 2px; color: #000; }
-        .name { font-size: 14px; color: #333; margin-bottom: 12px; height: 38px; line-height: 1.3; overflow: hidden; }
+        .shop-btn { background-color: #556cd6; color: white; border: none; padding: 8px 0; border-radius: 20px; font-size: 13px; cursor: pointer; width: 100%; font-weight: 500; }
         
-        .btn { background-color: #5a6bd8; color: white; border: none; padding: 10px 0; border-radius: 20px; font-size: 15px; width: 100%; cursor: pointer; font-weight: 600; }
+        .products-row.bottom { margin-top: 20px; }
+
+        /* نیا سیکشن: ویڈیو کے نیچے آنے والا آرٹیکل */
+        .article-details { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+        .meta-info { font-size: 14px; color: #888; margin-bottom: 10px; }
+        .meta-info span { color: #556cd6; font-weight: bold; }
+        .article-title { font-size: 24px; font-weight: 800; color: #0b1b36; line-height: 1.3; margin-bottom: 15px; }
+        .article-text { font-size: 16px; color: #333; line-height: 1.6; }
     </style>
 </head>
 <body>
 <div class="container">
     <nav>
-        <a href="index.html" class="back">←</a>
+        <a href="index.html" class="back-btn">←</a>
         <a href="index.html" class="logo">BESTREVIEWS</a>
-        <div style="width: 28px;"></div>
+        <div style="width: 24px;"></div>
     </nav>
 
-    <div class="video-box">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video">
-        <div class="play-icon">▶</div>
+    <div class="video-player">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: white; opacity: 0.8;">▶</div>
     </div>
 
-    <div class="shop-text">Shop the video</div>
+    <h3 class="shop-text">Shop the video</h3>
     
     <div class="products-row">
-        <div class="product">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun"></div>
-            <div class="brand">TOLOCO</div>
-            <div class="name">Massage Gun</div>
-            <button class="btn">Shop now</button>
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun">
+            </div>
+            <div class="product-brand">TOLOCO</div>
+            <div class="product-name">Massage Gun</div>
+            <button class="shop-btn">Shop now</button>
         </div>
-        <div class="product">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab"></div>
-            <div class="brand">Samsung</div>
-            <div class="name">Galaxy Tab S10 FE</div>
-            <button class="btn">Shop now</button>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab">
+            </div>
+            <div class="product-brand">Samsung</div>
+            <div class="product-name">Galaxy Tab S10 FE</div>
+            <button class="shop-btn">Shop now</button>
         </div>
-        <div class="product">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson V15"></div>
-            <div class="brand">Dyson</div>
-            <div class="name">V15 Detect Absolute with Car Cleaning Kit</div>
-            <button class="btn">Shop now</button>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
+            </div>
+            <div class="product-brand">Dyson</div>
+            <div class="product-name">V15 Detect Absolute with Car Cleaning Kit</div>
+            <button class="shop-btn">Shop now</button>
         </div>
     </div>
 
-    <div class="products-row">
-        <div class="product">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8"></div>
-            <div class="brand">Dyson</div>
-            <div class="name">V8 Cyclone</div>
-            <button class="btn">Shop now</button>
+    <div class="products-row bottom">
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8">
+            </div>
+            <div class="product-brand">Dyson</div>
+            <div class="product-name">V8 Cyclone</div>
+            <button class="shop-btn">Shop now</button>
         </div>
-        <div class="product">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com"></div>
-            <div class="brand">Money.com</div>
-            <div class="name">Home Equity Loan</div>
-            <button class="btn">Shop now</button>
+
+        <div class="product-item">
+            <div class="product-image-box">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com">
+            </div>
+            <div class="product-brand">Money.com</div>
+            <div class="product-name">Home Equity Loan</div>
+            <button class="shop-btn">Shop now</button>
         </div>
-        <div class="product" style="visibility: hidden;"></div>
+        
+        <div class="product-item" style="visibility: hidden;"></div>
+    </div>
+
+    <!-- 🟢 نیا سیکشن: پروڈکٹس کے نیچے آرٹیکل کا ٹائٹل اور ڈسکرپشن -->
+    <div class="article-details">
+        <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
+        <div class="article-title">Epic Discounts: Home sweet home: Clever finds for your home, self and wallet</div>
+        <div class="article-text">
+            Hosted by: Ashley Howard. Make home your haven and discover cozy upgrades worth grabbing now. Your home is your favorite place to be, so this week's Epic Discounts is dedicated to it. From keeping it clean to pampering yourself without leaving it, our favorite products of the week are perfect for making the most of the time you spend at home. They're also available at awesome prices, so it's easy to indulge and save. In our weekly roundup, you'll find a muscle-soothing massager, lightweight yet powerful vacuum and feature-packed tablet. And if you're ready to tap your home's equity for a major project, dream vacation or other big-ticket item, our Money Minute will point you in the right direction to find a rate and term so you can achieve your financial goals.
+        </div>
     </div>
 
 </div>
