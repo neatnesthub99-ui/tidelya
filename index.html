@@ -4,42 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestReviews</title>
+    <!-- یہاں سے اصل فونٹ لوڈ ہو رہا ہے -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* بالکل سیم فونٹ اور کلر */
-        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
+        body { font-family: 'Libre Franklin', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
         
-        /* نیوی گیشن بالکل سیم */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
         nav .menu { font-size: 28px; cursor: pointer; }
-        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; }
+        nav .logo { font-size: 22px; font-weight: 800; letter-spacing: 2px; }
         nav .search { font-size: 24px; cursor: pointer; }
         
-        /* بچوں والا بڑا آرٹیکل */
         .hero-img { width: 100%; border-radius: 10px; display: block; }
-        .meta { font-size: 14px; color: #777; margin: 15px 0 8px 0; font-weight: bold; }
+        .meta { font-size: 13px; color: #777; margin: 15px 0 8px 0; font-weight: 600; }
         .meta span { color: #00bcd4; }
-        .title { font-size: 26px; font-weight: bold; line-height: 1.3; margin: 0 0 15px 0; }
+        .title { font-size: 25px; font-weight: 800; line-height: 1.3; margin: 0 0 15px 0; }
         .desc { font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px; }
         
-        /* Related Reviews بکس (بالکل سیم گرے رنگ) */
+        /* Related Reviews Box */
         .related-box { background-color: #f7f9fa; padding: 15px; border-radius: 8px; margin-bottom: 25px; }
-        .related-box h3 { font-size: 17px; font-weight: bold; margin: 0 0 10px 0; color: #000; }
-        .related-box p { font-size: 16px; color: #d89b55; font-weight: bold; margin: 0; line-height: 1.5; }
+        .related-box h3 { font-size: 17px; font-weight: 800; margin: 0 0 10px 0; color: #000; }
+        .related-box p { font-size: 15px; color: #d89b55; font-weight: 700; margin: 0; line-height: 1.5; }
         
-        /* THE LATEST سیکشن */
+        /* THE LATEST */
         .latest-section { border-top: 3px solid #d89b55; padding-top: 15px; margin-bottom: 30px; }
-        .latest-section h2 { font-size: 28px; font-weight: bold; margin: 0 0 20px 0; letter-spacing: 1px; }
+        .latest-section h2 { font-size: 28px; font-weight: 800; margin: 0 0 20px 0; letter-spacing: 1px; }
         .article-item { border-bottom: 1px solid #e0e0e0; padding-bottom: 20px; margin-bottom: 20px; }
         .article-item:last-child { border-bottom: none; }
-        .article-item h3 { font-size: 22px; font-weight: bold; margin: 0; line-height: 1.4; }
+        .article-item h3 { font-size: 21px; font-weight: 800; margin: 0; line-height: 1.4; }
         
-        /* ویڈیو کارڈ */
+        /* Video Card */
         .video-card { text-decoration: none; color: inherit; display: block; margin-bottom: 30px; }
         .video-thumb { position: relative; width: 100%; border-radius: 10px; overflow: hidden; background-color: #00bcd4; }
         .video-thumb img { width: 100%; display: block; }
         .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: rgba(255, 255, 255, 0.9); }
-        .video-title { font-size: 22px; font-weight: bold; margin: 15px 0 0 0; line-height: 1.4; }
+        .video-title { font-size: 21px; font-weight: 800; margin: 15px 0 0 0; line-height: 1.4; }
     </style>
 </head>
 <body>
