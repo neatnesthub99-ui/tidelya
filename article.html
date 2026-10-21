@@ -3,56 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestReviews - Article</title>
+    <title>BestReviews - Latest</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
-        .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
         
-        .latest-section { border-top: 3px solid #e0a96d; padding-top: 10px; margin-bottom: 25px; }
-        .latest-section h2 { font-size: 24px; margin: 5px 0 20px 0; letter-spacing: 1px; color: #000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
+        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit; }
+        nav .back { font-size: 28px; text-decoration: none; color: inherit; }
         
-        .article-item { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; }
-        .meta-info { font-size: 13px; color: #888; margin-bottom: 8px; }
-        .meta-info span { color: #00bcd4; font-weight: bold; }
-        .article-item h3 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 600; color: #000; }
+        .latest-section { border-top: 3px solid #d89b55; padding-top: 15px; }
+        .latest-section h2 { font-size: 28px; margin: 0 0 20px 0; font-weight: bold; letter-spacing: 1px; }
         
-        .article-img { width: 100%; border-radius: 10px; display: block; margin-bottom: 10px; }
+        .article-item { border-bottom: 1px solid #e0e0e0; padding-bottom: 20px; margin-bottom: 20px; }
+        .article-item:last-child { border-bottom: none; }
+        
+        .meta { font-size: 14px; color: #777; margin-bottom: 8px; font-weight: bold; }
+        .meta span { color: #00bcd4; }
+        
+        .article-item h3 { font-size: 22px; font-weight: bold; margin: 0 0 15px 0; line-height: 1.4; }
+        
+        .article-img { width: 100%; border-radius: 10px; display: block; margin-top: 10px; }
     </style>
 </head>
 <body>
 <div class="container">
     <nav>
-        <a href="index.html" class="back-btn">←</a>
+        <a href="index.html" class="back">←</a>
         <a href="index.html" class="logo">BESTREVIEWS</a>
-        <div style="width: 24px;"></div>
+        <div style="width: 28px;"></div>
     </nav>
 
     <div class="latest-section">
         <h2>THE LATEST</h2>
         
         <div class="article-item">
-            <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
+            <div class="meta">Oct. 20, 2026 | <span>HOME</span></div>
             <h3>Amazon's bestselling cordless vacuum is under $100 and has nearly 3K 5-star reviews</h3>
         </div>
 
         <div class="article-item">
-            <div class="meta-info">Oct. 21, 2026 | <span>BEAUTY & PERSONAL CARE</span></div>
+            <div class="meta">Oct. 21, 2026 | <span>BEAUTY & PERSONAL CARE</span></div>
             <h3>This Revlon hair dryer was purchased over 20K times this month and is less than $30</h3>
         </div>
 
         <div class="article-item">
-            <div class="meta-info">Oct. 19, 2026 | <span>TOYS & GAMES</span></div>
+            <div class="meta">Oct. 19, 2026 | <span>TOYS & GAMES</span></div>
             <h3>Barbie has a new DreamHouse — in this economy?</h3>
         </div>
 
-        <!-- وہ بڑا آرٹیکل جس میں تصویر ہے -->
-        <div class="article-item" style="border-bottom: none; margin-top: 20px;">
-            <div class="meta-info">Oct. 20, 2026 | <span>HOME</span></div>
+        <div class="article-item">
+            <div class="meta">Oct. 20, 2026 | <span>HOME</span></div>
             <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" class="article-img" alt="Epic Discounts">
-            <h3>Epic Discounts: Home sweet home: Clever finds for your wallet</h3>
+            <h3 style="margin-top: 15px;">Epic Discounts: Home sweet home: Clever finds for your wallet</h3>
         </div>
     </div>
 
