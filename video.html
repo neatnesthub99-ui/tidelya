@@ -11,84 +11,101 @@
         nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
         .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
         
-        .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 15px; position: relative; background: #000;}
-        .video-player img { width: 100%; display: block; opacity: 0.8; }
-        .video-title { font-size: 20px; font-weight: bold; margin-bottom: 20px; line-height: 1.3; }
+        /* ویڈیو پلیئر کا ڈیزائن */
+        .video-container { width: 100%; margin-bottom: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #000; }
+        .video-container video { width: 100%; display: block; }
         
+        .video-title { font-size: 20px; font-weight: bold; margin-bottom: 20px; line-height: 1.3; }
+        .shop-heading { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+        
+        /* پروڈکٹس گرڈ */
         .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
-        .product-item { text-align: center; }
-        .product-image-box { border: 1px solid #eee; border-radius: 12px; padding: 10px; margin-bottom: 10px; background: #fff; height: 120px; display: flex; align-items: center; justify-content: center; }
+        .product-item { text-align: center; background: #fff; padding: 10px; border: 1px solid #f0f0f0; border-radius: 12px; }
+        .product-image-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
         .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        .product-brand { font-weight: bold; font-size: 14px; }
-        .product-name { font-size: 13px; color: #555; margin: 4px 0 10px 0; height: 35px; overflow: hidden; }
-        .shop-btn { background-color: #556cd6; color: white; border: none; padding: 8px 20px; border-radius: 20px; font-size: 14px; cursor: pointer; width: 100%; font-weight: 500; }
+        .product-brand { font-weight: 600; font-size: 14px; color: #333; }
+        .product-name { font-size: 13px; color: #666; margin: 4px 0 12px 0; height: 38px; overflow: hidden; }
+        .shop-btn { background-color: #556cd6; color: white; border: none; padding: 10px 15px; border-radius: 25px; font-size: 14px; cursor: pointer; width: 100%; font-weight: 600; transition: 0.2s; }
+        .shop-btn:hover { background-color: #3f51b5; }
     </style>
 </head>
 <body>
 <div class="container">
+    <!-- نیوی گیشن بار -->
     <nav>
         <a href="index.html" class="back-btn">←</a>
         <a href="index.html" class="logo">BESTREVIEWS</a>
-        <div style="width: 24px;"></div> <!-- Spacer -->
+        <div style="width: 24px;"></div> 
     </nav>
 
-    <!-- ویڈیو پلیئر -->
-    <div class="video-player">
-        <!-- آپ بعد میں یہاں اصل ویڈیو ڈال سکیں گے -->
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: white;">▶</div>
+    <!-- اصل ویڈیو پلیئر -->
+    <div class="video-container">
+        <!-- میں نے یہاں ایک نمونہ ویڈیو لگائی ہے، آپ بعد میں اپنی ویڈیو کا لنک ڈال سکتے ہیں -->
+        <video controls poster="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
+    <!-- ویڈیو کا ٹائٹل -->
     <div class="video-title">Epic Discounts: Home sweet home: Clever finds for your wallet</div>
 
-    <h3 style="margin-top: 0;">Shop the video</h3>
+    <!-- شاپنگ سیکشن کا عنوان -->
+    <div class="shop-heading">Shop the video</div>
     
-    <!-- پروڈکٹس گرڈ -->
+    <!-- پروڈکٹس گرڈ (بالکل آپ کے سکرین شاٹ کی طرح) -->
     <div class="products-grid">
+        
+        <!-- پروڈکٹ 1: TOLOCO Massage Gun -->
         <div class="product-item">
             <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun">
+                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="TOLOCO Massage Gun">
             </div>
             <div class="product-brand">TOLOCO</div>
             <div class="product-name">Massage Gun</div>
             <button class="shop-btn">Shop now</button>
         </div>
 
+        <!-- پروڈکٹ 2: Samsung Galaxy Tab S10 FE -->
         <div class="product-item">
             <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Galaxy Tab S10 FE">
             </div>
             <div class="product-brand">Samsung</div>
             <div class="product-name">Galaxy Tab S10 FE</div>
             <button class="shop-btn">Shop now</button>
         </div>
 
+        <!-- پروڈکٹ 3: Dyson V15 Detect Absolute -->
         <div class="product-item">
             <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
+                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson V15 Detect Absolute with Car Cleaning Kit">
             </div>
             <div class="product-brand">Dyson</div>
-            <div class="product-name">V15 Detect Absolute</div>
+            <div class="product-name">V15 Detect Absolute with Car Cleaning Kit</div>
             <button class="shop-btn">Shop now</button>
         </div>
 
+        <!-- پروڈکٹ 4: Dyson V8 Cyclone -->
         <div class="product-item">
             <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8 Cyclone">
             </div>
             <div class="product-brand">Dyson</div>
             <div class="product-name">V8 Cyclone</div>
             <button class="shop-btn">Shop now</button>
         </div>
-        
+
+        <!-- پروڈکٹ 5: Money.com Home Equity Loan -->
         <div class="product-item">
             <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com Home Equity Loan">
             </div>
             <div class="product-brand">Money.com</div>
             <div class="product-name">Home Equity Loan</div>
             <button class="shop-btn">Shop now</button>
         </div>
+
     </div>
 
 </div>
