@@ -22,6 +22,9 @@ const LATEST = [
   { date: "Oct. 21, 2026", cat: "Beauty & Personal Care", title: "This Revlon hair dryer was purchased over 20K times this month and is less than $30" },
   { date: "Oct. 19, 2026", cat: "Toys & Games", title: "Barbie has a new DreamHouse — in this economy?" },
   { type: "video", date: "Oct. 20, 2026", cat: "Home", title: "Epic Discounts: Home sweet home: Clever finds for your home, self and wallet",
+    // ویڈیو لگانی ہو تو ان میں سے ایک لائن کھول لیں:
+    // video: "videos/epic.mp4", poster: "images/epic-thumb.jpg",
+    // youtube: "abc123",
     body: "Sample text: yahan video ki tafseel likhein. Is hisse mein poora article dikhega jo popup ke andar neeche aata hai.",
     products: [
       { brand: "TOLOCO", name: "Massage Gun", img: "", bg: "#f2f2f2", icon: "💆", url: "#" },
@@ -35,5 +38,6 @@ const LATEST = [
 const DEALS = [
   { title: "Money.com Home Equity Loan", sub: "Best home equity loans of 2026", img: "", bg: "#cfe6fb", icon: "🏠" },
   { title: "Dyson V15 Detect Absolute with Car Cleaning Kit", price: "$599.99", off: "33% OFF", img: "", bg: "#fafafa", icon: "🧹" },
-  { title: "TOLOCO Massage Gun", price: "$39.99", off: "50% OFF", img: "", bg: "#f2f2f2", icon: "💆" }
+  { title: "TOLOCO Massage Gun", price: "$39.99", off: "50% OFF", img: "", bg: "#f2f2f2", icon: "💆" },
+  { title: "Samsung Galaxy Tab S10 FE", price: "$349.99", off: "30% OFF", img: "", bg: "#e6f4f1", icon: "📱" }
 ];
