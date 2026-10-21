@@ -5,105 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestReviews - Video</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #0b1b36; }
         .container { max-width: 600px; margin: 0 auto; padding: 15px; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
-        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit;}
-        .back-btn { font-size: 24px; text-decoration: none; color: inherit; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
+        nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; text-decoration: none; color: inherit; }
+        nav .back { font-size: 28px; text-decoration: none; color: inherit; }
         
         /* ویڈیو */
-        .video-player { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 10px; position: relative; background: #000;}
-        .video-player img { width: 100%; display: block; opacity: 0.9; }
+        .video-box { position: relative; width: 100%; border-radius: 10px; overflow: hidden; background: #00bcd4; }
+        .video-box img { width: 100%; display: block; }
+        .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 60px; color: rgba(255, 255, 255, 0.9); }
         
-        /* شاپ دی ویڈیو ٹیکسٹ */
-        h3.shop-text { font-size: 20px; font-weight: bold; margin: 15px 0; color: #000; }
+        .shop-text { font-size: 24px; font-weight: bold; margin: 20px 0 15px 0; color: #0b1b36; }
         
-        /* 3 پروڈکٹس ایک ہی لائن میں */
-        .products-row { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
-        .product-item { width: 32%; text-align: center; }
+        /* پروڈکٹس لائن */
+        .products-row { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 25px; }
+        .product { width: 32%; text-align: center; }
         
-        /* پروڈکٹ امیج بکس (ہلکی گرے بارڈر کے ساتھ جیسے تصویر میں ہے) */
-        .product-image-box { border: 1px solid #ccc; border-radius: 10px; padding: 5px; margin-bottom: 10px; background: #fff; height: 100px; display: flex; align-items: center; justify-content: center; }
-        .product-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        /* تصویر کا بارڈر (بالکل سیم) */
+        .img-box { border: 1px solid #ccc; border-radius: 12px; padding: 10px; height: 110px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; background: #fff; }
+        .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        .product-brand { font-weight: bold; font-size: 14px; color: #000; margin-bottom: 2px; }
-        .product-name { font-size: 12px; color: #333; margin-bottom: 10px; height: 32px; overflow: hidden; line-height: 1.3; }
+        .brand { font-weight: bold; font-size: 16px; margin-bottom: 2px; color: #000; }
+        .name { font-size: 14px; color: #333; margin-bottom: 12px; height: 38px; line-height: 1.3; overflow: hidden; }
         
-        /* نیلے رنگ کے بٹن */
-        .shop-btn { background-color: #556cd6; color: white; border: none; padding: 8px 0; border-radius: 20px; font-size: 13px; cursor: pointer; width: 100%; font-weight: 500; }
-        
-        /* دوسری لائن کے پروڈکٹس */
-        .products-row.bottom { margin-top: 30px; }
+        /* بٹن (بالکل سیم نیلا کلر) */
+        .btn { background-color: #5a6bd8; color: white; border: none; padding: 10px 0; border-radius: 20px; font-size: 16px; width: 100%; cursor: pointer; font-weight: normal; }
     </style>
 </head>
 <body>
 <div class="container">
     <nav>
-        <a href="index.html" class="back-btn">←</a>
+        <a href="index.html" class="back">←</a>
         <a href="index.html" class="logo">BESTREVIEWS</a>
-        <div style="width: 24px;"></div>
+        <div style="width: 28px;"></div>
     </nav>
 
-    <!-- ویڈیو پلیئر (تھمب نیل) -->
-    <div class="video-player">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video Playing">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: white; opacity: 0.8;">▶</div>
+    <div class="video-box">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Video">
+        <div class="play-icon">▶</div>
     </div>
 
-    <h3 class="shop-text">Shop the video</h3>
+    <div class="shop-text">Shop the video</div>
     
-    <!-- پہلی لائن: 3 پروڈکٹس -->
+    <!-- پہلی لائن -->
     <div class="products-row">
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun">
-            </div>
-            <div class="product-brand">TOLOCO</div>
-            <div class="product-name">Massage Gun</div>
-            <button class="shop-btn">Shop now</button>
+        <div class="product">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=300&auto=format&fit=crop" alt="Massage Gun"></div>
+            <div class="brand">TOLOCO</div>
+            <div class="name">Massage Gun</div>
+            <button class="btn">Shop now</button>
         </div>
-
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab">
-            </div>
-            <div class="product-brand">Samsung</div>
-            <div class="product-name">Galaxy Tab S10 FE</div>
-            <button class="shop-btn">Shop now</button>
+        <div class="product">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="Samsung Tab"></div>
+            <div class="brand">Samsung</div>
+            <div class="name">Galaxy Tab S10 FE</div>
+            <button class="btn">Shop now</button>
         </div>
-
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson Vacuum">
-            </div>
-            <div class="product-brand">Dyson</div>
-            <div class="product-name">V15 Detect Absolute with Car Cleaning Kit</div>
-            <button class="shop-btn">Shop now</button>
+        <div class="product">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=300&auto=format&fit=crop" alt="Dyson V15"></div>
+            <div class="brand">Dyson</div>
+            <div class="name">V15 Detect Absolute with Car Cleaning Kit</div>
+            <button class="btn">Shop now</button>
         </div>
     </div>
 
-    <!-- دوسری لائن: مزید پروڈکٹس -->
-    <div class="products-row bottom">
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8">
-            </div>
-            <div class="product-brand">Dyson</div>
-            <div class="product-name">V8 Cyclone</div>
-            <button class="shop-btn">Shop now</button>
+    <!-- دوسری لائن -->
+    <div class="products-row">
+        <div class="product">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Dyson V8"></div>
+            <div class="brand">Dyson</div>
+            <div class="name">V8 Cyclone</div>
+            <button class="btn">Shop now</button>
         </div>
-
-        <div class="product-item">
-            <div class="product-image-box">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com">
-            </div>
-            <div class="product-brand">Money.com</div>
-            <div class="product-name">Home Equity Loan</div>
-            <button class="shop-btn">Shop now</button>
+        <div class="product">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" alt="Money.com"></div>
+            <div class="brand">Money.com</div>
+            <div class="name">Home Equity Loan</div>
+            <button class="btn">Shop now</button>
         </div>
-        
-        <!-- خالی جگہ تاکہ گرڈ خراب نہ ہو -->
-        <div class="product-item" style="visibility: hidden;"></div>
+        <div class="product" style="visibility: hidden;"></div>
     </div>
 
 </div>
