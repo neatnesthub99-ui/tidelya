@@ -11,22 +11,32 @@
         nav .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; }
         nav .menu-icon, nav .search-icon { font-size: 24px; cursor: pointer; }
         
+        /* بڑا آرٹیکل */
         .hero-section img { width: 100%; border-radius: 10px; display: block; }
-        .hero-title { font-size: 22px; font-weight: bold; margin: 15px 0 5px 0; line-height: 1.3; }
-        .meta-info { font-size: 13px; color: #666; margin-bottom: 20px; }
-        .meta-info span { color: #00bcd4; }
+        .hero-title { font-size: 22px; font-weight: bold; margin: 15px 0 5px 0; line-height: 1.3; color: #000; }
+        .meta-info { font-size: 13px; color: #888; margin-bottom: 15px; }
+        .meta-info span { color: #00bcd4; font-weight: bold; }
         
+        /* Related Reviews (بکس کے بغیر، صرف ٹیکسٹ) */
+        .related-reviews { margin: 15px 0; }
+        .related-reviews h4 { margin: 0 0 8px 0; font-size: 16px; color: #000; }
+        .related-reviews p { margin: 0; color: #d89b55; font-weight: 600; font-size: 14px; line-height: 1.5; }
+        
+        .article-desc { color: #333; font-size: 15px; line-height: 1.5; margin-bottom: 20px; }
+        
+        /* لیٹیسٹ سیکشن */
         .latest-section { border-top: 3px solid #e0a96d; padding-top: 10px; margin-bottom: 25px; }
         .latest-section h2 { font-size: 24px; margin: 5px 0 20px 0; letter-spacing: 1px; }
         .article-item { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; text-decoration: none; display: block; color: inherit; }
-        .article-item h3 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 600; }
+        .article-item h3 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 600; color: #000; }
         
-        .video-card { border: 1px solid #ddd; border-radius: 12px; overflow: hidden; margin-bottom: 20px; cursor: pointer; display: block; text-decoration: none; color: inherit; }
-        .video-thumbnail { position: relative; width: 100%; background-color: #00bcd4; }
+        /* ویڈیو کارڈ */
+        .video-card { margin-bottom: 20px; cursor: pointer; display: block; text-decoration: none; color: inherit; }
+        .video-thumbnail { position: relative; width: 100%; border-radius: 10px; overflow: hidden; }
         .video-thumbnail img { width: 100%; display: block; }
         .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: rgba(255, 255, 255, 0.9); }
-        .video-card-content { padding: 15px; }
-        .video-card-content h3 { font-size: 16px; margin: 0; font-weight: 600; }
+        .video-card-content { padding: 10px 0; }
+        .video-card-content h3 { font-size: 16px; margin: 0; font-weight: 600; color: #000; }
     </style>
 </head>
 <body>
@@ -43,14 +53,13 @@
         <div class="meta-info" style="margin-top: 15px;">Oct. 21, 2026 | <span>HOLIDAY</span></div>
         <div class="hero-title">These are the top 10 bestselling kids' Halloween costumes on Amazon right now</div>
         
-        <!-- ریلیٹڈ ریویوز باکس -->
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-            <h4 style="margin: 0 0 10px 0; font-size: 16px;">Related Reviews:</h4>
-            <p style="margin: 0; color: #d89b55; font-weight: 500; font-size: 14px; line-height: 1.5;">
-                Halloween costume trends 2026: Horror, pop culture and mythology rule, Google unveils top-trending Halloween costumes of 2026, 9 Halloween costumes that let your evil cat shine
-            </p>
+        <p class="article-desc">These are Amazon's top 10 bestselling kids' Halloween costumes, AKA the ones you'll probably see at your door over and over this year.</p>
+
+        <!-- Related Reviews (بغیر بکس کے) -->
+        <div class="related-reviews">
+            <h4>Related Reviews:</h4>
+            <p>Halloween costume trends 2026: Horror, pop culture and mythology rule, Google unveils top-trending Halloween costumes of 2026, 9 Halloween costumes that let your evil cat shine</p>
         </div>
-        <p style="color: #555; font-size: 15px; line-height: 1.5;">These are Amazon's top 10 bestselling kids' Halloween costumes, AKA the ones you'll probably see at your door over and over this year.</p>
     </div>
 
     <!-- لیٹیسٹ آرٹیکلز -->
